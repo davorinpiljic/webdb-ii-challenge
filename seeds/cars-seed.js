@@ -14,6 +14,24 @@ exports.seed = function(knex) {
           mileage: 92000,
           transmission: "manual",
           title: "clean"
+        },
+        {
+          id: 2,
+          VIN: "alsh20735072",
+          make: "Porsche",
+          model: "911",
+          mileage: 7626,
+          transmission: "manual",
+          title: "clean"
+        },
+        {
+          id: 3,
+          VIN: "alks029375097209",
+          make: "Volkswagen",
+          model: "Golf MK2",
+          mileage: 136800,
+          transmission: "manual",
+          title: "clean"
         }
       ]);
     });
