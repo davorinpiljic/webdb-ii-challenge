@@ -13,7 +13,9 @@ exports.seed = function(knex) {
           model: "Zastava 55",
           mileage: 92000,
           transmission: "manual",
-          title: "clean"
+          title: "clean",
+          stock: 1000,
+          sold: true
         },
         {
           id: 2,
@@ -22,7 +24,9 @@ exports.seed = function(knex) {
           model: "911",
           mileage: 7626,
           transmission: "manual",
-          title: "clean"
+          title: "clean",
+          stock: 1001,
+          sold: false
         },
         {
           id: 3,
@@ -31,7 +35,9 @@ exports.seed = function(knex) {
           model: "Golf MK2",
           mileage: 136800,
           transmission: "manual",
-          title: "clean"
+          title: "clean",
+          stock: 1002,
+          sold: false
         }
       ]);
     });

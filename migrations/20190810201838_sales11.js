@@ -2,10 +2,10 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable("sales", function(table) {
-      table.string("VIN").unique().notNullable()
+      table.integer("stock").unique().notNullable()
       table.decimal("sale_amount").notNullable()
-      table.foreign('VIN')
-      .references('VIN')
+      table.foreign('stock')
+      .references('stock')
       .inTable('cars');
     });
   };

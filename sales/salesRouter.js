@@ -24,4 +24,19 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/cars", async (req, res) => {
+  try {
+    const sales = await db("sales").select();
+    const cars = await db("cars").select();
+    const soldCars = await db("cars as c")
+      .join("sales as s", "c.stock", "s.stock")
+      .select("c.VIN", "c.stock", "s.sale_amount");
+    res.status(200).json(soldCars);
+  } catch (err) {
+    res
+      .status(500)
+      .json({ err: err.message, message: "Failed to get sale list" });
+  }
+});
+
 module.exports = router;
