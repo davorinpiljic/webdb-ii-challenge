@@ -7,6 +7,7 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex("sales").insert([
         {
+          id: 1,
           stock: 1000,
           sale_amount: 10350.0
         }

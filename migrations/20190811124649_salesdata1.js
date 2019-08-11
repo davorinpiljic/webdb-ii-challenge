@@ -2,6 +2,7 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable("sales", function(table) {
+      table.increments()
       table.integer("stock").unique().notNullable()
       table.decimal("sale_amount").notNullable()
       table.foreign('stock')
